@@ -7,7 +7,13 @@
 }
 
 body {
-  background-color: rgb(116, 252, 206);
+  background: #2a7b9b;
+  background: radial-gradient(
+    circle,
+    rgba(42, 123, 155, 1) 0%,
+    rgba(87, 199, 133, 1) 50%,
+    rgba(237, 221, 83, 1) 100%
+  );
 }
 /* page content*/
 #content {
@@ -19,7 +25,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(95, 206, 169);
+  background: #1a4d63;
+  background: radial-gradient(
+    circle,
+    rgba(26, 77, 99, 1) 0%,
+    rgba(72, 161, 109, 1) 50%,
+    rgba(189, 175, 49, 1) 100%
+  );
   padding: 0 10px;
   margin: 0;
   height: 90px;
@@ -61,7 +73,13 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(95, 206, 169);
+  background: #1a4d63;
+  background: radial-gradient(
+    circle,
+    rgba(26, 77, 99, 1) 0%,
+    rgba(72, 161, 109, 1) 50%,
+    rgba(189, 175, 49, 1) 100%
+  );
   padding: 0 10px;
   margin-top: 900px;
   height: 90px;
@@ -89,11 +107,13 @@ h1 {
   display: flex;
   flex-direction: column;
   border: 2px solid greenyellow;
+  border-radius: 20px;
   box-shadow: 1px 2px #0e7446;
   background-color: #a4d32d;
 }
 .pokemon-box:hover {
   transform: scale(1.2);
+  transition: 800ms;
   cursor: pointer;
   box-shadow: 2px 4px #0e7446;
 }
@@ -120,44 +140,4 @@ h1 {
 
 #load-more-button:hover {
   background-color: #84f65b;
-}
-
-.modal {
-  display: none; /* Standardmäßig ausgeblendet*/
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 10% auto;
-  padding: 20px;
-  border: 2px solid #51bb2a;
-  border-radius: 10px;
-  width: 300px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.modal-content img {
-  width: 200px;
-  height: auto;
-}
-
-.close-button {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close-button:hover {
-  color: black;
 }
