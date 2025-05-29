@@ -90,6 +90,7 @@ h1 {
   flex-direction: column;
   border: 2px solid greenyellow;
   box-shadow: 1px 2px #0e7446;
+  background-color: #a4d32d;
 }
 .pokemon-box:hover {
   transform: scale(1.2);
@@ -104,4 +105,59 @@ h1 {
 #pokemon-name {
   justify-content: center;
   padding-left: 60px;
+}
+
+#load-more-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  background-color: #51bb2a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#load-more-button:hover {
+  background-color: #84f65b;
+}
+
+.modal {
+  display: none; /* Standardmäßig ausgeblendet*/
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 2px solid #51bb2a;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content img {
+  width: 200px;
+  height: auto;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: black;
 }

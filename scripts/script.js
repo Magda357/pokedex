@@ -1,16 +1,25 @@
+let responseAsPokemon = [];
+let offset = 0;
+const limit = 16;
+
 function init() {
   showPokemons();
+  document
+    .getElementById("load-more-button")
+    .addEventListener("click", showPokemons);
 }
-
-let responseAsPokemon = [];
 
 async function showPokemons() {
   const pokemonContainer = document.getElementById("pokemon-container");
   try {
-    let response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=16");
+    let response = await fetch(
+      `https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`
+    );
+
     let data = await response.json();
     responseAsPokemon = data.results;
     renderPoks(responseAsPokemon);
+    offset += limit;
   } catch (error) {
     console.error("Fehler beim Laden der Pokémon:", error);
   }
@@ -18,9 +27,8 @@ async function showPokemons() {
 
 function renderPoks(pokemonList) {
   const container = document.getElementById("pokemon-container");
-  container.innerHTML = "";
 
-  pokemonList.forEach((pokemon, index) => {
+  pokemonList.forEach((pokemon) => {
     const id = extractPokemonId(pokemon.url); // z.B. 1, 2, 3
     const capitalizedName =
       pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);

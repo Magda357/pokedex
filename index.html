@@ -31,11 +31,22 @@
     <main>
       <section id="main-container">
         <div id="pokemon-container"></div>
+        <div style="text-align: center; margin: 40px 0">
+          <button id="load-more-button">Mehr Pokemons</button>
+        </div>
       </section>
     </main>
     <footer>
       <section id="footer-container"></section>
     </footer>
     <script src="./scripts/script.js"></script>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2 id="modal-title"></h2>
+        <img id="modal-img" src="" alt="Pokemon" />
+      </div>
+    </div>
   </body>
 </html>
