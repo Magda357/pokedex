@@ -55,7 +55,7 @@ h1 {
   height: auto;
 }
 #main-container {
-  width: 100%;
+  width: 100vw;
 }
 #footer-container {
   display: flex;
@@ -75,4 +75,33 @@ h1 {
 }
 #search-input:hover {
   border: 1px solid #84f65b;
+}
+#pokemon-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+.pokemon-box {
+  margin: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid greenyellow;
+  box-shadow: 1px 2px #0e7446;
+}
+.pokemon-box:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  box-shadow: 2px 4px #0e7446;
+}
+
+#pokemon-img {
+  width: 200px;
+  height: auto;
+}
+#pokemon-name {
+  justify-content: center;
+  padding-left: 60px;
 }
