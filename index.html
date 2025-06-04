@@ -1,44 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
 
-    <title>Pokedex</title>
-  </head>
-  <body onload="init()">
-    <header>
-      <section id="header-section">
-        <div id="logo-section">
-          <div id="logo">
-            <img src="./img/logo-pokedex.png" alt="" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="img/pokemon.png" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Pokedex</title>
+</head>
+
+<body>
+  <header>
+    <section id="header-section">
+      <div id="logo-section">
+        <div id="logo">
+          <img src="./img/pokemon.png" alt="" />
+        </div>
+        <div class="shadow-dance-container">
+          <h1 class="shadow-dance-text" id="hidden">Pokedex</h1>
+        </div>
+      </div>
+      <div>
+        <input id="search-input" type="search" size="30" placeholder="Pokemon search.." />
+        <div id="search-message" style="color: rgb(67, 66, 65); font-size: 16px; margin-top: 5px"></div>
+      </div>
+    </section>
+  </header>
+  <main>
+    <section id="main-container">
+      <div id="pokemon-container"></div>
+      <div style="text-align: center; margin: 40px 0">
+        <img id="loader" class="loader hidden" src="./img/pokeball.svg" alt="Loading..." />
+        <button id="load-more-button" class="button-more-home">More Pokemons</button>
+        <button id="back-to-home" class="hidden button-more-home">Start Page</button>
+      </div>
+      <!--modal window-->
+      <div id="modal" class="modal hidden">
+        <div class="modal-content" id="modal-content">
+          <span class="close-button">&#10006;</span>
+          <h2 id="modal-title"></h2>
+          <img id="modal-image" src="" alt="Pokemon" />
+          <div class="nav-buttons">
+            <button id="next-button">Next</button>
+            <button id="prev-button"> previous </button>
           </div>
-          <div class="shadow-dance-container">
-            <h1 class="shadow-dance-text">Pokedex</h1>
-          </div>
         </div>
-        <div>
-          <input
-            id="search-input"
-            type="search"
-            size="30"
-            placeholder="search feld..."
-          />
-        </div>
-      </section>
-    </header>
-    <main>
-      <section id="main-container">
-        <div id="pokemon-container"></div>
-        <div style="text-align: center; margin: 40px 0">
-          <button id="load-more-button">Mehr Pokemons</button>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <section id="footer-container"></section>
-    </footer>
-    <script src="./scripts/script.js"></script>
-  </body>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section id="footer-container">
+      <div id="footer-content">
+        <p>&copy; 2025 All rights reserved.</p>
+      </div>
+    </section>
+  </footer>
+  <script type="module" src="./scripts/script.js"></script>
+</body>
+
 </html>
